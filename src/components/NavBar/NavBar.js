@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import logo from './logo-coffee.png';
 import './NavBar.css';
-
+import { MenuItems } from './MenuItems';
 
 const MenuIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" className={props.class} fill={props.fill} width={props.width} height={props.height} viewBox="0 0 24 24">
@@ -15,38 +15,42 @@ const CloseIcon = (props) => (
   </svg>
 )
 
-let isPressed = true;
-function iconPressed() {
-  isPressed = false;
-}
-
 function NavBar() {
-  return (
 
+  const [iconClicked, changeIcon] = useState(false);
+
+  let sideMenuRef = useRef();
+
+  const MenuOnClick = () => (
+
+    <div className={`side-menu ${iconClicked ? 'active' : 'inactive'}`} ref={sideMenuRef}>
+      <ul>{MenuItems.map((item, index) => { return <li key={index}> <a class={item.class} href={item.url}>{item.title} </a></li> })}</ul>
+    </div>
+  )
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!sideMenuRef.current.contains(e.target)) {
+        changeIcon(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+  });
+
+  return (
     <nav id='nav'>
       <div>
-        <img className="logo" src={logo} />
+        <img className="logo" src={logo} alt="logo" />
       </div>
       <div className="menu">
         <ul>
-          <li>
-            Home
-          </li>
-          <li>
-            About
-          </li>
-          <li>
-            Menu
-          </li>
-          <li>
-            Pages
-          </li>
-          <li>
-            Shop
-          </li>
-          <li>
-            Contacts
-          </li>
+          {MenuItems.map((item, index) => {
+            return (<li key={index}>
+              <a className={item.class} href={item.url}> {item.title}</a>
+            </li>)
+          })}
 
 
         </ul>
@@ -54,13 +58,18 @@ function NavBar() {
       <button>
         Book a Table
       </button>
-      <div className='menu-icon-div'>
+      <div className='menu-icon-div' >
 
-        <MenuIcon fill="white" width="30px" height="30px" />
+        <div onClick={() => changeIcon(!iconClicked)}  >
 
-
+          {iconClicked ? <CloseIcon fill="#fff" width="30px" height="30px" /> : <MenuIcon fill="#fff" width="30px" height="30px" />}
+        </div>
+        <MenuOnClick />
       </div>
+      
+ 
     </nav>
+        
 
   );
 }
