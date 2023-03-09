@@ -44,7 +44,7 @@ function About() {
                 </div>
                 <div className="about-section">
                     <div className="about-left">
-                        <SmallTitle title="About Us" />
+                        <SmallTitle title="About Us" fontSz="14px" />
                         <BigTitle title="Organic & Fresh Coffee
 Provider Center" fontSz="40px" margin="0px 0px 20px 0px" />
                         <ParagraphText margin="0px 0px 30px 0px" text="Sed ut perspiciatis unde omnis iste natus error voluptate accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae abillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione" />
