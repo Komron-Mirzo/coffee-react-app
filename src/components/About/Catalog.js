@@ -10,7 +10,6 @@ function Catalog({ backImg, icon, title }) {
         background: `url(${backImg})`,
         backgroundSize: "cover",
         borderRadius: "4px",
-
     }
 
     const titleStyle = {
