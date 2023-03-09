@@ -6,10 +6,10 @@
     display: flex;
     padding: 7px;
     justify-content: space-between;
-    max-width: 1110px;
     max-height: 70px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1110px;
 
 }
 
@@ -95,11 +95,24 @@
     height: 100vh;
     padding-top: 30px;
     padding-bottom: 30px;
+    transform: translateX(0px) scale(1);
+    transition: transform 5s;
+    visibility: visible;
+    opacity: 1;
 }
 
 .side-menu.inactive {
-    visibility: hidden;
-    display: none;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #090C0F;
+    width: 300px;
+    height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    transform: translateX(-100%) scale(0);
+    ;
+    transition: transform 5s;
 }
 
 .side-menu ul li {

@@ -1,0 +1,15 @@
+.small-title {
+
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+.small-title span {
+    margin-right: 5px;
+}
+
+.small-title h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+}
