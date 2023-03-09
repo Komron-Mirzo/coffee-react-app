@@ -3,6 +3,13 @@ import coffeeMenuImg from '../About/coffee-menu.jpg';
 import restaurantMenuImg from '../About/restaurant-menu.jpg';
 import foodMenuImg from '../About/food-menu.jpg';
 import '../About/About.css';
+import SmallTitle from '../Global/SmallTitle';
+import BigTitle from '../Global/BigTitle';
+import neverCof from '../About/never-cof.png';
+import ParagraphText from "../Global/ParagraphText";
+import Review from '../About/Review';
+import boy from '../About/boy.jpg';
+import girl from '../About/girl.jpg';
 
 // SVG Asset with props 
 const FoodMenuIcon = (props) => (
@@ -36,7 +43,24 @@ function About() {
                     <Catalog title="Food Menu" backImg={foodMenuImg} icon={<FoodMenuIcon width="52px" height="52px" fill="#fff" />} />
                 </div>
                 <div className="about-section">
-
+                    <div className="about-left">
+                        <SmallTitle title="About Us" />
+                        <BigTitle title="Organic & Fresh Coffee
+Provider Center" fontSz="40px" margin="0px 0px 20px 0px" />
+                        <ParagraphText margin="0px 0px 30px 0px" text="Sed ut perspiciatis unde omnis iste natus error voluptate accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae abillo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione" />
+                        <div className="review-card" >
+                            <span className="review-left">
+                                <Review img={boy} text="Quis autem vel eum iure
+reprehenderit in ealuptate velit esse molestiae"/>
+                            </span>
+                            <span className="review-right">
+                                <Review img={girl} text="Sed ut perspiciatis unde omnis iste natus error voluptate accusantium. " />
+                            </span>
+                        </div>
+                    </div>
+                    <div className="about-image" >
+                        <img src={neverCof} alt="coffee-pic" width="450px" />
+                    </div>
                 </div>
 
 
