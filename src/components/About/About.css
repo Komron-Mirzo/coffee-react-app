@@ -51,6 +51,7 @@
 .about-image {
     flex: 50%;
     text-align: right;
+    margin-bottom: auto;
 }
 
 .catalog-menu {
