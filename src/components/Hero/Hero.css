@@ -24,12 +24,13 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 501px) and (max-width: 768px) {
     #hero-container {
-        padding-right: 50px;
+        padding-right: 10px;
     }
 
 }
+
 @media (max-width: 500px) {
     #hero-container {
         padding-right: 0px;

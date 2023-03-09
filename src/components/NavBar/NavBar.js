@@ -40,7 +40,8 @@ function NavBar() {
   });
 
   return (
-    <nav id='nav'>
+
+    <div id="nav-parent"><nav id='nav'>
       <div>
         <img className="logo" src={logo} alt="logo" />
       </div>
@@ -66,10 +67,11 @@ function NavBar() {
         </div>
         <MenuOnClick />
       </div>
-      
- 
-    </nav>
-        
+
+
+    </nav></div>
+
+
 
   );
 }
