@@ -8,19 +8,24 @@ const BeanIcon = (props) => (
     </svg>
 )
 
-function SmallTitle({ title, fontSz }) {
+function SmallTitle({ title, fontSz, marginDiv, justifyContent }) {
     const smallTitle = {
         fontSize: fontSz,
         color: "#D48521",
         fontFamily: "'Open Sans', sans-serif",
         textTransform: 'Uppercase',
         fontWeight: "400",
-        
+
+    }
+
+    const divSmallTitleStyle = {
+        margin: marginDiv,
+        justifyContent: justifyContent,
     }
 
     return (
 
-        <div className="small-title">
+        <div className="small-title" style={divSmallTitleStyle}>
             <span>
                 <BeanIcon fill={"#D48521"} width={"24px"} height={"35px"} />
             </span>

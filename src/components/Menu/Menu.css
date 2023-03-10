@@ -1,0 +1,27 @@
+.menu-container {
+    width: 100%;
+}
+
+.menu-content {
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-card-parent {
+    display: grid;
+    grid-template-columns: 10rem 10rem 10rem;
+    grid-gap: 1rem;
+}
+
+.menu-card {
+    display: flex;
+}
+
+.menu-card-img {
+    flex: 40%;
+}
+
+.menu-card-content {
+    flex: 60%;
+}

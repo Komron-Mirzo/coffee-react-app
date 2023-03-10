@@ -2,7 +2,7 @@ import NavBar from './components/NavBar/NavBar';
 import Hero from './components/Hero/Hero';
 import './index.css';
 import About from './components/About/About';
-
+import Menu from './components/Menu/Menu';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
       <NavBar />
       <Hero />
       <About />
+      <Menu />
 
 
 
