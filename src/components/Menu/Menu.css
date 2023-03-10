@@ -10,18 +10,15 @@
 
 .menu-card-parent {
     display: grid;
-    grid-template-columns: 10rem 10rem 10rem;
+    grid-template-columns: 50% 50%;
     grid-gap: 1rem;
 }
 
 .menu-card {
     display: flex;
+
 }
 
-.menu-card-img {
-    flex: 40%;
-}
+.menu-card-img {}
 
-.menu-card-content {
-    flex: 60%;
-}
+.menu-card-content {}
