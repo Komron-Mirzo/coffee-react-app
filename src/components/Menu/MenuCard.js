@@ -1,3 +1,4 @@
+import '../Menu/Menu.css';
 import CoffeeList from "./CoffeeList";
 
 
